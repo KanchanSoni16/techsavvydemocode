@@ -1,0 +1,165 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_api_gateway_deployment.apideploy (expand)" [label = "aws_api_gateway_deployment.apideploy", shape = "box"]
+		"[root] aws_api_gateway_integration.rest_api_integration1 (expand)" [label = "aws_api_gateway_integration.rest_api_integration1", shape = "box"]
+		"[root] aws_api_gateway_integration_response.rest_api_integration_response (expand)" [label = "aws_api_gateway_integration_response.rest_api_integration_response", shape = "box"]
+		"[root] aws_api_gateway_method.rest_api_method1 (expand)" [label = "aws_api_gateway_method.rest_api_method1", shape = "box"]
+		"[root] aws_api_gateway_method_response.response_200 (expand)" [label = "aws_api_gateway_method_response.response_200", shape = "box"]
+		"[root] aws_api_gateway_resource.rest_api_resources (expand)" [label = "aws_api_gateway_resource.rest_api_resources", shape = "box"]
+		"[root] aws_api_gateway_rest_api.rest_api (expand)" [label = "aws_api_gateway_rest_api.rest_api", shape = "box"]
+		"[root] aws_cloudfront_distribution.api_gateway_cf (expand)" [label = "aws_cloudfront_distribution.api_gateway_cf", shape = "box"]
+		"[root] aws_cloudwatch_log_group.cloudwatch_logs (expand)" [label = "aws_cloudwatch_log_group.cloudwatch_logs", shape = "box"]
+		"[root] aws_dynamodb_table.state-locking (expand)" [label = "aws_dynamodb_table.state-locking", shape = "box"]
+		"[root] aws_iam_role.api_role (expand)" [label = "aws_iam_role.api_role", shape = "box"]
+		"[root] aws_iam_role.apigatway_role (expand)" [label = "aws_iam_role.apigatway_role", shape = "box"]
+		"[root] aws_iam_role_policy.api_policy (expand)" [label = "aws_iam_role_policy.api_policy", shape = "box"]
+		"[root] aws_iam_role_policy.apigatway_policy (expand)" [label = "aws_iam_role_policy.apigatway_policy", shape = "box"]
+		"[root] aws_lambda_function.AWS_S3_API_Lambda_Function (expand)" [label = "aws_lambda_function.AWS_S3_API_Lambda_Function", shape = "box"]
+		"[root] aws_lambda_permission.allow_bucket (expand)" [label = "aws_lambda_permission.allow_bucket", shape = "box"]
+		"[root] aws_lambda_permission.apigw_lambda (expand)" [label = "aws_lambda_permission.apigw_lambda", shape = "box"]
+		"[root] aws_s3_bucket.api_bucket (expand)" [label = "aws_s3_bucket.api_bucket", shape = "box"]
+		"[root] aws_s3_bucket.statefile-bucket (expand)" [label = "aws_s3_bucket.statefile-bucket", shape = "box"]
+		"[root] aws_s3_bucket_acl.api_acl (expand)" [label = "aws_s3_bucket_acl.api_acl", shape = "box"]
+		"[root] aws_s3_bucket_acl.state_bucket_acl1 (expand)" [label = "aws_s3_bucket_acl.state_bucket_acl1", shape = "box"]
+		"[root] aws_s3_bucket_notification.aws-lambda-trigger (expand)" [label = "aws_s3_bucket_notification.aws-lambda-trigger", shape = "box"]
+		"[root] aws_s3_bucket_ownership_controls.ownership-control (expand)" [label = "aws_s3_bucket_ownership_controls.ownership-control", shape = "box"]
+		"[root] aws_s3_bucket_ownership_controls.ownership-control1 (expand)" [label = "aws_s3_bucket_ownership_controls.ownership-control1", shape = "box"]
+		"[root] aws_s3_bucket_public_access_block.access-block (expand)" [label = "aws_s3_bucket_public_access_block.access-block", shape = "box"]
+		"[root] aws_s3_bucket_public_access_block.access-block1 (expand)" [label = "aws_s3_bucket_public_access_block.access-block1", shape = "box"]
+		"[root] aws_s3_object.object (expand)" [label = "aws_s3_object.object", shape = "box"]
+		"[root] data.archive_file.lambda_api_function (expand)" [label = "data.archive_file.lambda_api_function", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/archive\"]" [label = "provider[\"registry.terraform.io/hashicorp/archive\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] var.accountId" [label = "var.accountId", shape = "note"]
+		"[root] var.acl" [label = "var.acl", shape = "note"]
+		"[root] var.api_assume_role_policy" [label = "var.api_assume_role_policy", shape = "note"]
+		"[root] var.api_description" [label = "var.api_description", shape = "note"]
+		"[root] var.api_name" [label = "var.api_name", shape = "note"]
+		"[root] var.api_policy" [label = "var.api_policy", shape = "note"]
+		"[root] var.api_policy_name" [label = "var.api_policy_name", shape = "note"]
+		"[root] var.api_role_name" [label = "var.api_role_name", shape = "note"]
+		"[root] var.apigw_principal" [label = "var.apigw_principal", shape = "note"]
+		"[root] var.assume_role_policy" [label = "var.assume_role_policy", shape = "note"]
+		"[root] var.bucket_name" [label = "var.bucket_name", shape = "note"]
+		"[root] var.endpoint_types" [label = "var.endpoint_types", shape = "note"]
+		"[root] var.environment" [label = "var.environment", shape = "note"]
+		"[root] var.function_name" [label = "var.function_name", shape = "note"]
+		"[root] var.http_method" [label = "var.http_method", shape = "note"]
+		"[root] var.integration_http_method" [label = "var.integration_http_method", shape = "note"]
+		"[root] var.integration_type" [label = "var.integration_type", shape = "note"]
+		"[root] var.lambda_policy_name" [label = "var.lambda_policy_name", shape = "note"]
+		"[root] var.lambda_role_name" [label = "var.lambda_role_name", shape = "note"]
+		"[root] var.lambda_zip_location" [label = "var.lambda_zip_location", shape = "note"]
+		"[root] var.method_authorization" [label = "var.method_authorization", shape = "note"]
+		"[root] var.myregion" [label = "var.myregion", shape = "note"]
+		"[root] var.object_acl" [label = "var.object_acl", shape = "note"]
+		"[root] var.object_key" [label = "var.object_key", shape = "note"]
+		"[root] var.object_source" [label = "var.object_source", shape = "note"]
+		"[root] var.path_part" [label = "var.path_part", shape = "note"]
+		"[root] var.policy" [label = "var.policy", shape = "note"]
+		"[root] var.runtime" [label = "var.runtime", shape = "note"]
+		"[root] var.source_file" [label = "var.source_file", shape = "note"]
+		"[root] var.stage_name" [label = "var.stage_name", shape = "note"]
+		"[root] var.state_bucket_name" [label = "var.state_bucket_name", shape = "note"]
+		"[root] var.status_code" [label = "var.status_code", shape = "note"]
+		"[root] aws_api_gateway_deployment.apideploy (expand)" -> "[root] aws_api_gateway_integration.rest_api_integration1 (expand)"
+		"[root] aws_api_gateway_deployment.apideploy (expand)" -> "[root] var.stage_name"
+		"[root] aws_api_gateway_integration.rest_api_integration1 (expand)" -> "[root] aws_api_gateway_method.rest_api_method1 (expand)"
+		"[root] aws_api_gateway_integration.rest_api_integration1 (expand)" -> "[root] aws_iam_role.apigatway_role (expand)"
+		"[root] aws_api_gateway_integration.rest_api_integration1 (expand)" -> "[root] aws_lambda_function.AWS_S3_API_Lambda_Function (expand)"
+		"[root] aws_api_gateway_integration.rest_api_integration1 (expand)" -> "[root] var.integration_http_method"
+		"[root] aws_api_gateway_integration.rest_api_integration1 (expand)" -> "[root] var.integration_type"
+		"[root] aws_api_gateway_integration_response.rest_api_integration_response (expand)" -> "[root] aws_api_gateway_integration.rest_api_integration1 (expand)"
+		"[root] aws_api_gateway_integration_response.rest_api_integration_response (expand)" -> "[root] aws_api_gateway_method_response.response_200 (expand)"
+		"[root] aws_api_gateway_method.rest_api_method1 (expand)" -> "[root] aws_api_gateway_resource.rest_api_resources (expand)"
+		"[root] aws_api_gateway_method.rest_api_method1 (expand)" -> "[root] var.http_method"
+		"[root] aws_api_gateway_method.rest_api_method1 (expand)" -> "[root] var.method_authorization"
+		"[root] aws_api_gateway_method_response.response_200 (expand)" -> "[root] aws_api_gateway_method.rest_api_method1 (expand)"
+		"[root] aws_api_gateway_method_response.response_200 (expand)" -> "[root] var.status_code"
+		"[root] aws_api_gateway_resource.rest_api_resources (expand)" -> "[root] aws_api_gateway_rest_api.rest_api (expand)"
+		"[root] aws_api_gateway_resource.rest_api_resources (expand)" -> "[root] var.path_part"
+		"[root] aws_api_gateway_rest_api.rest_api (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_api_gateway_rest_api.rest_api (expand)" -> "[root] var.api_description"
+		"[root] aws_api_gateway_rest_api.rest_api (expand)" -> "[root] var.api_name"
+		"[root] aws_api_gateway_rest_api.rest_api (expand)" -> "[root] var.endpoint_types"
+		"[root] aws_cloudfront_distribution.api_gateway_cf (expand)" -> "[root] aws_api_gateway_rest_api.rest_api (expand)"
+		"[root] aws_cloudfront_distribution.api_gateway_cf (expand)" -> "[root] var.myregion"
+		"[root] aws_cloudfront_distribution.api_gateway_cf (expand)" -> "[root] var.path_part"
+		"[root] aws_cloudfront_distribution.api_gateway_cf (expand)" -> "[root] var.stage_name"
+		"[root] aws_cloudwatch_log_group.cloudwatch_logs (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_cloudwatch_log_group.cloudwatch_logs (expand)" -> "[root] var.function_name"
+		"[root] aws_dynamodb_table.state-locking (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_role.api_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_role.api_role (expand)" -> "[root] var.assume_role_policy"
+		"[root] aws_iam_role.api_role (expand)" -> "[root] var.lambda_role_name"
+		"[root] aws_iam_role.apigatway_role (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_role.apigatway_role (expand)" -> "[root] var.api_assume_role_policy"
+		"[root] aws_iam_role.apigatway_role (expand)" -> "[root] var.api_role_name"
+		"[root] aws_iam_role_policy.api_policy (expand)" -> "[root] aws_iam_role.api_role (expand)"
+		"[root] aws_iam_role_policy.api_policy (expand)" -> "[root] var.lambda_policy_name"
+		"[root] aws_iam_role_policy.api_policy (expand)" -> "[root] var.policy"
+		"[root] aws_iam_role_policy.apigatway_policy (expand)" -> "[root] aws_iam_role.apigatway_role (expand)"
+		"[root] aws_iam_role_policy.apigatway_policy (expand)" -> "[root] var.api_policy"
+		"[root] aws_iam_role_policy.apigatway_policy (expand)" -> "[root] var.api_policy_name"
+		"[root] aws_lambda_function.AWS_S3_API_Lambda_Function (expand)" -> "[root] aws_iam_role.api_role (expand)"
+		"[root] aws_lambda_function.AWS_S3_API_Lambda_Function (expand)" -> "[root] data.archive_file.lambda_api_function (expand)"
+		"[root] aws_lambda_function.AWS_S3_API_Lambda_Function (expand)" -> "[root] var.function_name"
+		"[root] aws_lambda_function.AWS_S3_API_Lambda_Function (expand)" -> "[root] var.runtime"
+		"[root] aws_lambda_permission.allow_bucket (expand)" -> "[root] aws_lambda_function.AWS_S3_API_Lambda_Function (expand)"
+		"[root] aws_lambda_permission.allow_bucket (expand)" -> "[root] aws_s3_bucket.api_bucket (expand)"
+		"[root] aws_lambda_permission.apigw_lambda (expand)" -> "[root] aws_api_gateway_method.rest_api_method1 (expand)"
+		"[root] aws_lambda_permission.apigw_lambda (expand)" -> "[root] aws_lambda_function.AWS_S3_API_Lambda_Function (expand)"
+		"[root] aws_lambda_permission.apigw_lambda (expand)" -> "[root] var.accountId"
+		"[root] aws_lambda_permission.apigw_lambda (expand)" -> "[root] var.apigw_principal"
+		"[root] aws_lambda_permission.apigw_lambda (expand)" -> "[root] var.myregion"
+		"[root] aws_s3_bucket.api_bucket (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_s3_bucket.api_bucket (expand)" -> "[root] var.bucket_name"
+		"[root] aws_s3_bucket.api_bucket (expand)" -> "[root] var.environment"
+		"[root] aws_s3_bucket.api_bucket (expand)" -> "[root] var.myregion"
+		"[root] aws_s3_bucket.statefile-bucket (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_s3_bucket.statefile-bucket (expand)" -> "[root] var.environment"
+		"[root] aws_s3_bucket.statefile-bucket (expand)" -> "[root] var.myregion"
+		"[root] aws_s3_bucket.statefile-bucket (expand)" -> "[root] var.state_bucket_name"
+		"[root] aws_s3_bucket_acl.api_acl (expand)" -> "[root] aws_s3_bucket_ownership_controls.ownership-control (expand)"
+		"[root] aws_s3_bucket_acl.api_acl (expand)" -> "[root] aws_s3_bucket_public_access_block.access-block (expand)"
+		"[root] aws_s3_bucket_acl.api_acl (expand)" -> "[root] var.acl"
+		"[root] aws_s3_bucket_acl.state_bucket_acl1 (expand)" -> "[root] aws_s3_bucket_ownership_controls.ownership-control1 (expand)"
+		"[root] aws_s3_bucket_acl.state_bucket_acl1 (expand)" -> "[root] aws_s3_bucket_public_access_block.access-block1 (expand)"
+		"[root] aws_s3_bucket_notification.aws-lambda-trigger (expand)" -> "[root] aws_lambda_permission.allow_bucket (expand)"
+		"[root] aws_s3_bucket_ownership_controls.ownership-control (expand)" -> "[root] aws_s3_bucket.api_bucket (expand)"
+		"[root] aws_s3_bucket_ownership_controls.ownership-control1 (expand)" -> "[root] aws_s3_bucket.statefile-bucket (expand)"
+		"[root] aws_s3_bucket_public_access_block.access-block (expand)" -> "[root] aws_s3_bucket.api_bucket (expand)"
+		"[root] aws_s3_bucket_public_access_block.access-block1 (expand)" -> "[root] aws_s3_bucket.statefile-bucket (expand)"
+		"[root] aws_s3_object.object (expand)" -> "[root] aws_s3_bucket.api_bucket (expand)"
+		"[root] aws_s3_object.object (expand)" -> "[root] var.object_acl"
+		"[root] aws_s3_object.object (expand)" -> "[root] var.object_key"
+		"[root] aws_s3_object.object (expand)" -> "[root] var.object_source"
+		"[root] data.archive_file.lambda_api_function (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/archive\"]"
+		"[root] data.archive_file.lambda_api_function (expand)" -> "[root] var.lambda_zip_location"
+		"[root] data.archive_file.lambda_api_function (expand)" -> "[root] var.source_file"
+		"[root] output.base_url (expand)" -> "[root] aws_api_gateway_deployment.apideploy (expand)"
+		"[root] output.cloud_front_domain (expand)" -> "[root] aws_cloudfront_distribution.api_gateway_cf (expand)"
+		"[root] output.invoke_url (expand)" -> "[root] aws_api_gateway_deployment.apideploy (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/archive\"] (close)" -> "[root] data.archive_file.lambda_api_function (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_api_gateway_deployment.apideploy (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_api_gateway_integration_response.rest_api_integration_response (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudfront_distribution.api_gateway_cf (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_cloudwatch_log_group.cloudwatch_logs (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_dynamodb_table.state-locking (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy.api_policy (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_role_policy.apigatway_policy (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_lambda_permission.apigw_lambda (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_acl.api_acl (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_acl.state_bucket_acl1 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket_notification.aws-lambda-trigger (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_object.object (expand)"
+		"[root] root" -> "[root] output.base_url (expand)"
+		"[root] root" -> "[root] output.cloud_front_domain (expand)"
+		"[root] root" -> "[root] output.invoke_url (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/archive\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+	}
+}
+
